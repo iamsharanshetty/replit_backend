@@ -8,10 +8,17 @@ from passlib.context import CryptContext
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
 # Database connection string from Render
-DATABASE_URL = os.getenv(
-    "DATABASE_URL", 
-    "postgresql://coding_challenge_platform_user:lMxyQpBH4d5hRZhVdlpktt23WUOaIYfJ@dpg-d3fvlah5pdvs73c092hg-a.oregon-postgres.render.com/coding_challenge_platform"
-)
+# DATABASE_URL = os.getenv(
+#     "DATABASE_URL", 
+#     "postgresql://coding_challenge_platform_user:lMxyQpBH4d5hRZhVdlpktt23WUOaIYfJ@dpg-d3fvlah5pdvs73c092hg-a.oregon-postgres.render.com/coding_challenge_platform"
+# )
+
+# Database connection string from environment variable
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    # Fallback for local development only - remove in production
+    DATABASE_URL = "postgresql://coding_challenge_platform_user:lMxyQpBH4d5hRZhVdlpktt23WUOaIYfJ@dpg-d3fvlah5pdvs73c092hg-a.oregon-postgres.render.com/coding_challenge_platform"
 
 def get_db_connection():
     """Get database connection"""
