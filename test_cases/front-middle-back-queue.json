@@ -1,0 +1,47 @@
+{
+  "problem_id": "front-middle-back-queue",
+  "public_tests": [
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"popFront\"]\n[[]]\n",
+      "expected_output": "[null,-1]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushFront\",\"popFront\"]\n[[],[1],[]]\n",
+      "expected_output": "[null,null,1]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushBack\",\"popBack\"]\n[[],[2],[]]\n",
+      "expected_output": "[null,null,2]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushMiddle\",\"popMiddle\"]\n[[],[3],[]]\n",
+      "expected_output": "[null,null,3]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushFront\",\"pushBack\",\"pushMiddle\"]\n[[],[1],[2],[3]]\n",
+      "expected_output": "[null,null,null,null]\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushFront\",\"pushBack\",\"popMiddle\"]\n[[],[1],[2],[]]\n",
+      "expected_output": "[null,null,null,1]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushFront\",\"pushMiddle\",\"pushMiddle\",\"popMiddle\"]\n[[],[1],[2],[3],[]]\n",
+      "expected_output": "[null,null,null,null,2]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushFront\",\"pushBack\",\"pushMiddle\",\"popBack\"]\n[[],[1],[2],[3],[]]\n",
+      "expected_output": "[null,null,null,null,2]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushFront\",\"pushBack\",\"pushMiddle\",\"popFront\"]\n[[],[1],[2],[3],[]]\n",
+      "expected_output": "[null,null,null,null,1]\n"
+    },
+    {
+      "input": "[\"FrontMiddleBackQueue\",\"pushFront\",\"pushBack\",\"pushMiddle\",\"popMiddle\",\"popMiddle\"]\n[[],[1],[2],[3],[],[]]\n",
+      "expected_output": "[null,null,null,null,3,1]\n"
+    }
+  ]
+}

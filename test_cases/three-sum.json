@@ -1,0 +1,47 @@
+{
+  "problem_id": "three-sum",
+  "public_tests": [
+    {
+      "input": "0\n\n",
+      "expected_output": "[]\n"
+    },
+    {
+      "input": "2\n1 2\n",
+      "expected_output": "[]\n"
+    },
+    {
+      "input": "4\n0 0 0 0\n",
+      "expected_output": "[[0,0,0]]\n"
+    },
+    {
+      "input": "3\n-1 0 1\n",
+      "expected_output": "[[-1,0,1]]\n"
+    },
+    {
+      "input": "5\n-2 -2 0 2 2\n",
+      "expected_output": "[[-2,0,2]]\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "5\n1 2 3 4 5\n",
+      "expected_output": "[]\n"
+    },
+    {
+      "input": "5\n-1 -2 -3 -4 -5\n",
+      "expected_output": "[]\n"
+    },
+    {
+      "input": "5\n-5 1 2 3 4\n",
+      "expected_output": "[[-5,1,4],[-5,2,3]]\n"
+    },
+    {
+      "input": "6\n-1 0 1 2 -1 -4\n",
+      "expected_output": "[[-1,-1,2],[-1,0,1]]\n"
+    },
+    {
+      "input": "5\n-100 -1 0 1 100\n",
+      "expected_output": "[[-100,0,100],[-1,0,1]]\n"
+    }
+  ]
+}

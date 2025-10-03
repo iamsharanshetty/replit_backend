@@ -1,0 +1,47 @@
+{
+  "problem_id": "elimination-game",
+  "public_tests": [
+    {
+      "input": "1\n",
+      "expected_output": "1\n"
+    },
+    {
+      "input": "9\n",
+      "expected_output": "6\n"
+    },
+    {
+      "input": "2\n",
+      "expected_output": "2\n"
+    },
+    {
+      "input": "3\n",
+      "expected_output": "2\n"
+    },
+    {
+      "input": "4\n",
+      "expected_output": "2\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "5\n",
+      "expected_output": "2\n"
+    },
+    {
+      "input": "6\n",
+      "expected_output": "4\n"
+    },
+    {
+      "input": "7\n",
+      "expected_output": "4\n"
+    },
+    {
+      "input": "10\n",
+      "expected_output": "8\n"
+    },
+    {
+      "input": "24\n",
+      "expected_output": "14\n"
+    }
+  ]
+}

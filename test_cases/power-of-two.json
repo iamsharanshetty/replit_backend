@@ -1,0 +1,47 @@
+{
+  "problem_id": "power-of-two",
+  "public_tests": [
+    {
+      "input": "1\n",
+      "expected_output": "true\n"
+    },
+    {
+      "input": "16\n",
+      "expected_output": "true\n"
+    },
+    {
+      "input": "3\n",
+      "expected_output": "false\n"
+    },
+    {
+      "input": "0\n",
+      "expected_output": "false\n"
+    },
+    {
+      "input": "-2\n",
+      "expected_output": "false\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "1024\n",
+      "expected_output": "true\n"
+    },
+    {
+      "input": "999\n",
+      "expected_output": "false\n"
+    },
+    {
+      "input": "2\n",
+      "expected_output": "true\n"
+    },
+    {
+      "input": "8\n",
+      "expected_output": "true\n"
+    },
+    {
+      "input": "218\n",
+      "expected_output": "false\n"
+    }
+  ]
+}

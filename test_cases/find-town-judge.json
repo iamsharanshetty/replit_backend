@@ -1,0 +1,47 @@
+{
+  "problem_id": "find-town-judge",
+  "public_tests": [
+    {
+      "input": "2\n[[1,2]]\n",
+      "expected_output": "2\n"
+    },
+    {
+      "input": "3\n[[1,3],[2,3]]\n",
+      "expected_output": "3\n"
+    },
+    {
+      "input": "3\n[[1,3],[2,3],[3,1]]\n",
+      "expected_output": "-1\n"
+    },
+    {
+      "input": "1\n[]\n",
+      "expected_output": "1\n"
+    },
+    {
+      "input": "4\n[[1,3],[4,3],[2,3]]\n",
+      "expected_output": "3\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "4\n[[1,2],[2,3]]\n",
+      "expected_output": "-1\n"
+    },
+    {
+      "input": "2\n[]\n",
+      "expected_output": "-1\n"
+    },
+    {
+      "input": "3\n[[1,2],[2,1]]\n",
+      "expected_output": "-1\n"
+    },
+    {
+      "input": "3\n[[1,2],[3,2]]\n",
+      "expected_output": "2\n"
+    },
+    {
+      "input": "5\n[[1,5],[2,5],[3,5],[4,5]]\n",
+      "expected_output": "5\n"
+    }
+  ]
+}

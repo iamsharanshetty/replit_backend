@@ -1,0 +1,47 @@
+{
+  "problem_id": "max-path-sum-binary-tree",
+  "public_tests": [
+    {
+      "input": "[1,2,3]\n",
+      "expected_output": "6\n"
+    },
+    {
+      "input": "[-10,9,20,null,null,15,7]\n",
+      "expected_output": "42\n"
+    },
+    {
+      "input": "[2,-1]\n",
+      "expected_output": "2\n"
+    },
+    {
+      "input": "[-3]\n",
+      "expected_output": "-3\n"
+    },
+    {
+      "input": "[9,6,-3,null,null,-6,2,null,null,2,null,-6,-6,-6]\n",
+      "expected_output": "16\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "[5,4,8,11,null,13,4,7,2,null,null,null,1]\n",
+      "expected_output": "48\n"
+    },
+    {
+      "input": "[1,-2,3]\n",
+      "expected_output": "4\n"
+    },
+    {
+      "input": "[10,2,10,20,1,-25,null,null,null,null,null,3,4]\n",
+      "expected_output": "42\n"
+    },
+    {
+      "input": "[2,-1,-2]\n",
+      "expected_output": "2\n"
+    },
+    {
+      "input": "[-15,10,20,null,null,15,5,-5]\n",
+      "expected_output": "40\n"
+    }
+  ]
+}

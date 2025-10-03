@@ -1,0 +1,47 @@
+{
+  "problem_id": "tiny-url-encoder",
+  "public_tests": [
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://leetcode.com/problems/design-tinyurl\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://leetcode.com/problems/design-tinyurl\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://a.com\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://a.com\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"http://example.org\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"http://example.org\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://abc.com/path/page\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://abc.com/path/page\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://xyz.com?a=1&b=2\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://xyz.com?a=1&b=2\"]\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://longlonglongurl.com/really/long/path\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://longlonglongurl.com/really/long/path\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://leetcode.com\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://leetcode.com\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://different.com\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://different.com\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://site.com/1\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://site.com/1\"]\n"
+    },
+    {
+      "input": "[\"encode\", \"decode\"]\n[[\"https://abc.xyz\"], [\"<short>\"]]\n",
+      "expected_output": "[\"<short>\", \"https://abc.xyz\"]\n"
+    }
+  ]
+}

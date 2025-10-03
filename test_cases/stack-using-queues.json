@@ -1,0 +1,47 @@
+{
+  "problem_id": "stack-using-queues",
+  "public_tests": [
+    {
+      "input": "[\"MyStack\",\"empty\"]\n[[]]\n",
+      "expected_output": "[null,true]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"top\"]\n[[],[5],[]]\n",
+      "expected_output": "[null,null,5]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"pop\"]\n[[],[1],[2],[]]\n",
+      "expected_output": "[null,null,null,2]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"top\"]\n[[],[1],[2],[]]\n",
+      "expected_output": "[null,null,null,2]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"empty\"]\n[[],[1],[2],[]]\n",
+      "expected_output": "[null,null,null,false]\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"pop\",\"pop\",\"empty\"]\n[[],[1],[2],[],[],[]]\n",
+      "expected_output": "[null,null,null,2,1,true]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"pop\",\"empty\"]\n[[],[42],[],[]]\n",
+      "expected_output": "[null,null,42,true]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"push\",\"pop\",\"top\"]\n[[],[10],[20],[30],[],[]]\n",
+      "expected_output": "[null,null,null,null,30,20]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"push\",\"pop\",\"pop\",\"top\"]\n[[],[1],[2],[3],[],[],[]]\n",
+      "expected_output": "[null,null,null,null,3,2,1]\n"
+    },
+    {
+      "input": "[\"MyStack\",\"push\",\"push\",\"push\",\"pop\",\"empty\"]\n[[],[7],[8],[9],[],[]]\n",
+      "expected_output": "[null,null,null,null,9,false]\n"
+    }
+  ]
+}
