@@ -5,6 +5,8 @@ from datetime import datetime
 import os
 import json
 from grader import grade_submission
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 # Try to import database functions
 try:
@@ -97,6 +99,29 @@ async def signup(request: SignupRequest):
         print(f"✗ Signup error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+# @app.post("/login")
+# async def login(request: LoginRequest):
+#     """User login endpoint"""
+#     print(f"🔐 Login request received for username: {request.username}")
+    
+#     if not DATABASE_AVAILABLE:
+#         print("✗ Login failed: Database not available")
+#         raise HTTPException(
+#             status_code=503, 
+#             detail="Database service unavailable"
+#         )
+    
+#     try:
+#         result = verify_user(request.username, request.password)
+#         if not result["success"]:
+#             print(f"✗ Login failed: {result['error']}")
+#             raise HTTPException(status_code=401, detail=result["error"])
+#         print(f"✓ Login successful for user: {request.username}")
+#         return result
+#     except Exception as e:
+#         print(f"✗ Login error: {e}")
+#         raise HTTPException(status_code=500, detail=str(e))
+
 @app.post("/login")
 async def login(request: LoginRequest):
     """User login endpoint"""
@@ -116,8 +141,12 @@ async def login(request: LoginRequest):
             raise HTTPException(status_code=401, detail=result["error"])
         print(f"✓ Login successful for user: {request.username}")
         return result
+    except HTTPException:
+        raise
     except Exception as e:
-        print(f"✗ Login error: {e}")
+        print(f"✗ Login exception: {type(e).__name__}: {str(e)}")
+        import traceback
+        traceback.print_exc()  # This will show full error details
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/problems")
