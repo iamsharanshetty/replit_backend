@@ -6,6 +6,7 @@ from passlib.context import CryptContext
 # Password hashing
 # pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
+# pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Database connection string from Render
 # DATABASE_URL = os.getenv(
